@@ -28,7 +28,7 @@ a {
 .btn {
     padding: 1vw 3vw;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     background-color: var(--Color-Defaul);
     color: white;
     font-size: 2vw;
@@ -37,6 +37,8 @@ a {
 }
 .divs{
     height: 40vw;
+    margin: 10vw 10vw 0 3vw;
+    height: 100vh;
 }
 
 /* Navegação */
@@ -59,15 +61,12 @@ nav ul{
 nav li {
     margin-top: 15px;
     font-size: 2vw;
+    font-weight: 500;
 }
 nav li .btn {
     padding: 1vw 4vw;
     margin-top: -10px;
 }
-main {
-    margin: 3vw 10vw 0 3vw;
-}
-
 
 /* Primeira parte do site */
 #inicial {
@@ -77,12 +76,14 @@ main {
     display: flex;
     width: 30vw;
     float: left;
+    margin-left: 6vw;
 }
 #cont-inicial {
     float: right;
     text-align: left;
     margin-top: 8vw;
     font-size: 2vw;
+    margin-right: 6vw;
 }
 #cont-inicial p{
     font-size: 2vw;
@@ -103,11 +104,13 @@ main {
     width: 43vw;
     float: right;
     margin-top: -5vw;
+    margin-right: 10vw;
 }
 #cont-meio {
     display: block;
 }
 #cont-meio ul{
+    margin-left: 5vw;
     list-style: none;
 }
 #cont-meio li{
@@ -126,7 +129,7 @@ main {
     display: block;
     width: .5vw;
     height: 1.5vw;
-    border: solid rgb(0, 0, 0);
+    border: solid white;
     border-width: 0 .5vw .5vw 0;
     transform: rotate(45deg);
     position: absolute;
@@ -163,28 +166,38 @@ main {
 
 /* Aréa final do site */
 #final {
-    display: inline-flex;
+    display: flex;
+
     height: auto;
-    margin-bottom: 40px;
+
+    margin-bottom: 150px;
     margin-top: 10%;
 }
 .persona {
     float: left;
+
     background-color: var(--Color-Defaul);
-    width: 10vw;
-    margin-right: 10px;
-    height: 10vw;
+
+    padding: 3.8vw;
+
     border-radius: 50%;
 }
 .container {
-    box-sizing: border-box;
-    width: 40vw;
-    height: 15vw;
-    margin: 0 1vw 0 5vw;
+    width: 50vw;
+
+    margin-left: 50px;
+
     padding: 2vw;
     font-size: 1.5vw;
     background-color: rgba(128, 128, 128, 0.377);
     border-radius: 15px;
+}
+.text-person {
+    width: 22vw;
+    float: right;
+}
+.text-person h3{
+    margin-top: 10px;
 }
 
 
@@ -207,8 +220,27 @@ footer a {
 }
 .box {
     width: 25%;
-    line-height: 15px;
     margin: 0 1.5%;
+}
+.box1 {
+    margin-top: -35px;
+}
+.box1 h1{
+    font-size: 5vw;
+    margin-bottom: 23px;
+    font-weight: bold;
+    font-style: italic;
+}
+.box3 h2 + p{
+    line-height: 50px;
+}
+.box h2{
+    font-size: 2.3vw;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.box p{
+    line-height: 25px;
 }
 .box ul {
     display: flex;
@@ -218,18 +250,177 @@ footer a {
 .box li {
     font-size: 4vw;
 }
-.box3 p{
-    line-height: 20px;
-}
-.box h1{
-    font-size: 5vw;
-    margin-bottom: 13px;
-    font-weight: bold;
-    font-style: italic;
-}
-.box h2{
-    margin-top: 10px;
-    font-size: 2.3vw;
-    margin-bottom: 8px;
-    font-weight: bold;
+
+@media screen and (max-width:600px) {
+    .divs {
+        height: auto;
+    }
+    
+    nav .btn {
+        display: none;
+    }
+    nav {
+        display: block;
+        text-align: center;
+    }
+    .logo {
+        font-size: 15vw;
+    }
+    nav ul {
+        margin-left: 15vw;
+        margin-right: auto;
+        width: 65vw;
+        gap: 20px;
+    }
+    nav li {
+        font-weight: normal;
+        font-size: 6vw;
+    }
+
+    #inicial {
+        margin: 40px 0px;
+    }
+    #inicial img, #cont-inicial{
+        display: block;
+        float: none;
+    }
+    #inicial img{
+        width: 45vw;
+        margin-left: 28vw;
+    }
+    #cont-inicial{
+        margin-left: 15vw;
+    }
+    #cont-inicial p{
+        font-size: 4.5vw;
+    }
+    #cont-inicial h1{
+        font-size: 10vw;
+        margin-left: -3.5vw;
+    }
+    #cont-inicial .btn{
+        font-size: 6.5vw;
+        margin-left: 0vw;
+        padding: 8px 16px;
+    }
+
+
+    /* Meio */
+    #meio {
+        margin: 30vh 0 15vh;
+    }
+    #cont-middle{
+        margin-left: 30vw;
+    }
+    #cont-middle img{
+    display: block;
+    width: 55vw;
+    float: none;
+    margin-bottom: 50px;
+    margin-left: -12vw;
+    }
+    #cont-middle ul{
+        margin-left: 0;
+    }
+    #cont-middle li{
+        font-size: 4vw;
+        font-weight: bold;
+    }
+    #cont-meio input[type=checkbox]:after {
+        width: 1.5vw;
+        height: 2.5vw;
+        top: -3vw;
+        left: -3.5vw;
+    }    
+    #cont-meio input[type=checkbox]:before {
+        width: 5vw;
+        height: 5vw;
+        top: -3.5vw;
+        left: -5vw;
+    }
+    #ctt {
+        margin-left: -40px;
+    }
+    #ctt h4{
+        font-size: 4vw;
+        margin-bottom: 1vw;
+        margin-left: -15px;
+    }
+    #ctt input[type=text] {
+        display: block;
+        width: 60%;
+        font-size: 5vw;
+        padding: 10px 14px;
+        margin-bottom: 10px;
+    }
+    #ctt .call {
+        padding: 15px 25px;
+        font-size: 5vw;
+    }
+
+    /* Final */
+    #final {
+        display: contents;
+
+    }
+    .persona {
+        padding: 8vw;
+        margin: 10px 10px 0 10px;
+    }
+    .container {
+        width: 85vw;
+        height: 30vw;
+        margin: 0 0 20px 7vw;
+        font-size: 3.8vw;
+    }
+    .text-person {
+        width: 62vw;
+        float: right;
+    }
+
+
+    /* footer */ 
+    footer {
+        padding-bottom: 1px;
+    }
+    #cont-box {
+        display: block;
+        font-size: 3vw;
+        width: 80vw;
+        margin-left: 40px;
+    }
+    .box {
+        width: auto;
+        margin: 0 0 35px;
+    }
+    .box1 {
+        text-align: center;
+    }
+    .box1 h1{
+        font-size: 15vw;
+        margin-bottom: 8px;
+        font-weight: bold;
+        font-style: italic;
+    }
+    .box1 p{
+        font-size: 4vw;
+    }
+    .box ul {
+        gap: 6vw;
+    }
+    .box li {
+        font-size: 15vw;
+    }
+    .box3 h2 + p{
+        line-height: 35px;
+    }
+    .box h2{
+        font-size: 5vw;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .box p{
+        font-size: 4vw;
+        line-height: 25px;
+    }
 }
